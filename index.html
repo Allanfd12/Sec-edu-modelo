@@ -4,6 +4,15 @@
 <head>
 	<title></title>
 	<style type="text/css">
+	:root{
+		--cor-primaria-clara:#247DE5;
+		--cor-primaria : #1A51A6;
+		--cor-primaria-hover : #1A51A6;
+		--cor-primaria-escura-hover :#0f2e5e;
+		--cor-fonte-clara:#fff;
+		--cor-font-clara-hover:#fff;
+	}
+	
 		body {
 			margin: 0;
 			border: 0;
@@ -44,7 +53,7 @@
 		/*MENU SUPERIOR*/
 		.menu {
 			display: flex;
-			background-color: #1A51A6;
+			background-color: var(--cor-primaria);
 			margin-top: 6px;
 			width: 100%;
 			height: 40px;
@@ -70,7 +79,7 @@
 		}
 
 		.menu li a:hover {
-			background-color: #0f2e5e;
+			background-color: var(--cor-primaria-escura-hover);
 		}
 
 		/*MENU LATERAL*/
@@ -84,7 +93,7 @@
 		}
 
 		.side-menu dl {
-			background-color: #247DE5;
+			background-color: var(--cor-primaria-clara);
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
@@ -93,7 +102,7 @@
 		}
 
 		.side-menu dt a {
-			background-color: #1A51A6;
+			background-color: var(--cor-primaria);
 			display: block;
 			color: #fff;
 			padding: 8px 16px;
@@ -114,7 +123,7 @@
 
 		/* Change the link color on hover */
 		.side-menu dd a:hover {
-			background-color: #1A51A6;
+			background-color: var(--cor-primaria-hover);
 
 		}
 
@@ -194,10 +203,35 @@
 		}
 	</style>
 
+<script>
+	console.log("oi");
+	var autocontraste = false;
+	function Contraste(){
+		console.log("normal");
+		autocontraste = !autocontraste;
+		if(autocontraste){
+		
+			document.documentElement.style.setProperty('--cor-primaria-clara', "#000");	
+			document.documentElement.style.setProperty('--cor-primaria', "#000");	
+			document.documentElement.style.setProperty('--cor-primaria-hover', "#f00");	
+			document.documentElement.style.setProperty('--cor-primaria-escura-hover', "#f00");
+			console.log("preto");
+		}else{
+			console.log("normal");
+			document.documentElement.style.setProperty('--cor-primaria-clara', "#247DE5");	
+			document.documentElement.style.setProperty('--cor-primaria-hover', "#1A51A6");	
+			document.documentElement.style.setProperty('--cor-primaria', "#1A51A6");	
+			document.documentElement.style.setProperty('--cor-primaria-escura-hover', "#0f2e5e");
+		}
+		
+	}
+</script>
+
 </head>
 
 <body>
 	<div class="interface">
+		<div class="acessibilidade"><a  onclick="Contraste()"> autocontraste</a></div>
 		<div class="baner">
 			<div class="logo">
 				<img src="img/logo.png" width="250">
