@@ -18,15 +18,29 @@
 
 		.baner {
 			display: flex;
-			background-image: url("img/educ.jpg");
+			/*background-image: url("img/educ.jpg");*/
 			background-repeat: no-repeat;
 			background-size: 100%;
 			background-position: center;
 			width: 100%;
-			height: 150px;
+			height: 100px;
+
+		}
+		.logo{
+			margin: auto 0px;
+		}
+		.social{
+			margin: auto 5px;
+		}
+		.social ul li{
+			display: inline-block;
 
 		}
 
+		.social img {
+			height: 25px;
+			margin: 5px
+		}
 		/*MENU SUPERIOR*/
 		.menu {
 			display: flex;
@@ -135,7 +149,13 @@
 		.subtitulo {
 			color: #666;
 		}
-
+		.caminho{
+			margin: 10px 0px 20px 0px;
+			font-size: 11pt;
+		}
+		.caminho a {
+			text-decoration: none;
+		}
 		.rect {
 			background-color: #ddd;
 			border-radius: 5px;
@@ -179,8 +199,30 @@
 <body>
 	<div class="interface">
 		<div class="baner">
+			<div class="logo">
+				<img src="img/logo.png" width="250">
+			</div>
 			<div class="center">
 				<h1>Portal Minha Escola</h1>
+			</div>
+			<div class="social">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/facebook.png" alt="Github">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/twitter.png" alt="Twitter">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/instagram.png" alt="LinkedIn">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="menu">
@@ -221,7 +263,8 @@
 				<dd><a href="#contact">Administrativo</a></dd>
 				<dd><a href="#contact">Area restrita</a></dd>
 				<dd><a href="#contact">Contatos</a></dd>
-				<dt><a href="#about">escolas</a></dt>
+
+				<dt><a href="#about">Escolas</a></dt>
 				<dd><a href="#contact">Giuseppe Iacoviello</a></dd>
 				<dd><a href="#contact">Almerindo Alves Dos Santos</a></dd>
 				<dd><a href="#contact">Josaphat Mari</a></dd>
@@ -268,6 +311,7 @@
 		</div>
 
 		<div class="news">
+			<div class="caminho">você esta aqui: <a href="index.html">pagina inicial</a></div>
 			<div class="rect">
 
 			</div>
