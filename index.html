@@ -4,18 +4,18 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	:root{
-		--cor-primaria-clara:#247DE5;
-		--cor-primaria : #1A51A6;
-		--cor-primaria-hover : #1A51A6;
-		--cor-primaria-escura-hover :#0f2e5e;
-		--cor-fonte-clara:#fff;
-		--cor-font-clara-hover:#fff;
-	}
-	
-		body {
+		:root {
+			--cor-primaria-clara: #247DE5;
+			--cor-primaria: #1A51A6;
+			--cor-primaria-hover: #1A51A6;
+			--cor-primaria-escura-hover: #0f2e5e;
+			--cor-fonte-clara: #fff;
+			--cor-font-clara-hover: #fff;
+		}
+
+		* {
 			margin: 0;
-			border: 0;
+			padding: 0;
 		}
 
 		.interface {
@@ -27,21 +27,24 @@
 
 		.baner {
 			display: flex;
-			/*background-image: url("img/educ.jpg");*/
+			/*background-image: url("img/educ.jpg");
 			background-repeat: no-repeat;
 			background-size: 100%;
-			background-position: center;
+			background-position: center;*/
 			width: 100%;
 			height: 100px;
 
 		}
-		.logo{
+
+		.logo {
 			margin: auto 0px;
 		}
-		.social{
+
+		.social {
 			margin: auto 5px;
 		}
-		.social ul li{
+
+		.social ul li {
 			display: inline-block;
 
 		}
@@ -50,6 +53,7 @@
 			height: 25px;
 			margin: 5px
 		}
+
 		/*MENU SUPERIOR*/
 		.menu {
 			display: flex;
@@ -85,7 +89,7 @@
 		/*MENU LATERAL*/
 		.side-menu {
 			display: flex;
-			
+
 			margin-top: 6px;
 			/*margin-left: 6px;*/
 			width: 25%;
@@ -150,6 +154,86 @@
 
 		}
 
+		/*SLIDER DE IMAGENS*/
+		.rect {
+			background-color: chartreuse;
+			border-radius: 5px;
+			margin: auto;
+			margin-top: 20px;
+			padding: 5px;
+			/*background-image: url("img/baner.png");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			min-height: 220px;*/
+		}
+
+		.slider {
+			display: block;
+			height: 300px;
+			width: 100%;
+			margin: auto;
+			position: relative;
+		}
+
+		.slider li {
+			list-style: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.slider img {
+			margin: auto;
+			height: 100%;
+			width: 100%;
+			vertical-align: top;
+		}
+
+		.slider input {
+			display: none;
+		}
+
+		.slider label {
+			background-color: #000;
+			bottom: 10px;
+			cursor: pointer;
+			display: block;
+			height: 10px;
+			position: absolute;
+			width: 10px;
+			z-index: 10;
+		}
+
+		.slider li:nth-child(1) label {
+			right: 10px;
+		}
+
+		.slider li:nth-child(2) label {
+			right: 40px;
+		}
+
+		.slider li:nth-child(3) label {
+			right: 70px;
+		}
+
+		.slider img {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.slider li input:checked~img {
+			opacity: 1;
+			visibility: visible;
+			z-index: 10;
+		}
+
+
+
+
+
+
+
 		.titulo {
 			margin: 0;
 			/*text-align: center;*/
@@ -158,23 +242,17 @@
 		.subtitulo {
 			color: #666;
 		}
-		.caminho{
+
+		.caminho {
 			margin: 10px 0px 20px 0px;
 			font-size: 11pt;
 		}
+
 		.caminho a {
 			text-decoration: none;
 		}
-		.rect {
-			background-color: #ddd;
-			border-radius: 5px;
-			margin: auto;
-			background-image: url("img/baner.png");
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-position: center;
-			min-height: 220px;
-		}
+
+
 
 		.rect2 {
 			background-color: #ddd;
@@ -203,35 +281,35 @@
 		}
 	</style>
 
-<script>
-	console.log("oi");
-	var autocontraste = false;
-	function Contraste(){
-		console.log("normal");
-		autocontraste = !autocontraste;
-		if(autocontraste){
-		
-			document.documentElement.style.setProperty('--cor-primaria-clara', "#000");	
-			document.documentElement.style.setProperty('--cor-primaria', "#000");	
-			document.documentElement.style.setProperty('--cor-primaria-hover', "#f00");	
-			document.documentElement.style.setProperty('--cor-primaria-escura-hover', "#f00");
-			console.log("preto");
-		}else{
+	<script>
+		console.log("oi");
+		var autocontraste = false;
+		function Contraste() {
 			console.log("normal");
-			document.documentElement.style.setProperty('--cor-primaria-clara', "#247DE5");	
-			document.documentElement.style.setProperty('--cor-primaria-hover', "#1A51A6");	
-			document.documentElement.style.setProperty('--cor-primaria', "#1A51A6");	
-			document.documentElement.style.setProperty('--cor-primaria-escura-hover', "#0f2e5e");
+			autocontraste = !autocontraste;
+			if (autocontraste) {
+
+				document.documentElement.style.setProperty('--cor-primaria-clara', "#000");
+				document.documentElement.style.setProperty('--cor-primaria', "#000");
+				document.documentElement.style.setProperty('--cor-primaria-hover', "#f00");
+				document.documentElement.style.setProperty('--cor-primaria-escura-hover', "#f00");
+				console.log("preto");
+			} else {
+				console.log("normal");
+				document.documentElement.style.setProperty('--cor-primaria-clara', "#247DE5");
+				document.documentElement.style.setProperty('--cor-primaria-hover', "#1A51A6");
+				document.documentElement.style.setProperty('--cor-primaria', "#1A51A6");
+				document.documentElement.style.setProperty('--cor-primaria-escura-hover', "#0f2e5e");
+			}
+
 		}
-		
-	}
-</script>
+	</script>
 
 </head>
 
 <body>
 	<div class="interface">
-		<div class="acessibilidade"><a  onclick="Contraste()"> autocontraste</a></div>
+		<div class="acessibilidade"><a onclick="Contraste()"> autocontraste</a></div>
 		<div class="baner">
 			<div class="logo">
 				<img src="img/logo.png" width="250">
@@ -347,7 +425,23 @@
 		<div class="news">
 			<div class="caminho">você esta aqui: <a href="index.html">pagina inicial</a></div>
 			<div class="rect">
-
+				<ul class="slider">
+					<li>
+						<input type="radio" id="slide1" name="slide" checked>
+						<label for="slide1"></label>
+						<img src="img/baner.png" />
+					</li>
+					<li>
+						<input type="radio" id="slide2" name="slide">
+						<label for="slide2"></label>
+						<img src="img/baner-2.png" />
+					</li>
+					<li>
+						<input type="radio" id="slide3" name="slide">
+						<label for="slide3"></label>
+						<img src="img/baner-3.png" />
+					</li>
+				</ul>
 			</div>
 			<br>
 			<div class="rect2">
