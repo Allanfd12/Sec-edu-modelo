@@ -1,0 +1,352 @@
+:root {
+    --cor-primaria-clara: #247DE5;
+    --cor-primaria: #1A51A6;
+    --cor-primaria-hover: #1A51A6;
+    --cor-primaria-escura-hover: #0f2e5e;
+    --cor-fonte-clara: #fff;
+    --cor-font-clara-hover: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.interface {
+    background-color: #eee;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.baner {
+    display: flex;
+    /*background-image: url("img/educ.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;*/
+    width: 100%;
+    height: 100px;
+
+}
+
+.logo {
+    margin: auto 0px;
+}
+
+.social {
+    float: right;
+    margin-bottom: -20px;
+}
+
+.social ul li {
+    display: inline-block;
+
+}
+
+.social img {
+    height: 25px;
+    margin: 5px
+}
+
+/*INFORMACOES DA ESCOLA*/
+.container .cardSuperior {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    box-shadow: none;
+    border: none
+}
+
+/*MENU SUPERIOR*/
+.navbar {
+    border-radius: 4px 4px 4px 4px;
+}
+
+nav .navbar-nav {
+    text-align: left;
+}
+
+.nav-item .navbar-nav a {
+    text-align: left;
+}
+
+.menu {
+    border-radius: 4px 4px 4px 4px;
+    display: flex;
+    background-color: var(--cor-primaria);
+    margin-top: 6px;
+    width: 100%;
+    height: 40px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0px 0px 0px auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: var(--cor-primaria-escura-hover);
+}
+
+/*MENU LATERAL*/
+#accordion .card{
+    width: auto;
+    margin-top: 10px;
+    background-color: var(--cor-primaria-clara);
+}
+
+#accordion .card-header {
+    background-color: var(--cor-primaria-clara);
+    text-align: center;
+    padding: -80px;
+}
+#accordion a {
+    background-color: var(--cor-primaria-clara);
+    color: white;
+    text-decoration: none;
+}
+
+#accordion a:hover {
+    color: var(--cor-primaria-escura-hover);
+}
+
+.mb-0 button {
+    color: white;
+    font-style: inherit;
+}
+
+.mb-0 button:hover {
+    text-decoration: none;
+}
+
+.side-menu {
+    display: flex;
+    margin-top: 6px;
+    /*margin-left: 6px;*/
+    width: 25%;
+    /*height: 500px;*/
+}
+
+.side-menu dl {
+    background-color: var(--cor-primaria-clara);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /*background-color: #f1f1f1;*/
+}
+
+.side-menu dt a {
+    background-color: var(--cor-primaria);
+    display: block;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.side-menu dd {
+    margin-left: 0px;
+}
+
+.side-menu dd a {
+    /*background-color: #888;*/
+    display: block;
+    color: #fff;
+    padding: 4px 0px 4px 36px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.side-menu dd a:hover {
+    background-color: var(--cor-primaria-hover);
+
+}
+
+.center {
+    margin: auto;
+}
+
+/*CORPO DE NOTICIAS*/
+.card {
+    border: none;
+}
+
+.news {
+    width: 74%;
+    /*background-color: red*/
+    ;
+    margin: 6px 0px 0px 1%;
+}
+
+.card {
+
+    background-color: #ddd;
+    border-radius: 5px;
+    /*min-height: 300px;*/
+    box-shadow: 1px 1px 5px #888;
+    margin: auto;
+    padding: 15px;
+
+}
+
+.card .list-group-item {
+    background-color: #ddd;
+}
+
+a {
+    cursor: pointer;
+}
+
+.list-group-item-action:hover {
+    color: #247DE5;
+}
+
+/* PAGINACAO*/
+.card .page-link{
+    background-color: #ddd;
+    border: none;
+}
+
+.card .page-link:hover{
+    color: white;
+    background-color: var(--cor-primaria-clara);
+}
+
+/*SLIDER DE IMAGENS*/
+.rect {
+    background-color: chartreuse;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    /*background-image: url("img/baner.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    min-height: 220px;*/
+}
+
+.slider {
+    display: block;
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    right: 10px;
+}
+
+.slider li:nth-child(2) label {
+    right: 40px;
+}
+
+.slider li:nth-child(3) label {
+    right: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked~img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+
+
+.titulo {
+    margin: 0;
+    /*text-align: center;*/
+}
+
+.subtitulo {
+    color: #666;
+}
+
+.caminho {
+    margin: 10px 0px 20px 0px;
+    font-size: 11pt;
+}
+
+.caminho a {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    background-color: #ddd;
+}
+
+.rect2 {
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+
+.tt-news {
+    padding: 5px;
+    margin: 10px 0px;
+    border-bottom: 1px solid black;
+}
+
+.srl {
+    width: 49%;
+    margin: 0 0.5% 0 1%;
+    /*background-color: #abc; */
+}
+
+.srr {
+    width: 49%;
+    margin: 0 1% 0 0.5%;
+    /*sbackground-color: #abc;*/
+}
